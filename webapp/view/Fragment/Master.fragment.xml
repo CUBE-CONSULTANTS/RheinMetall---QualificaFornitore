@@ -1,0 +1,34 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+  xmlns:tnt="sap.tnt"
+  xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+<tnt:NavigationList
+				id="navigationList"
+				width="240px"	
+				selectedItem="Anagrafica"
+			>
+				<tnt:NavigationListItem
+					text="Anagrafica Fornitore"
+					key="Anagrafica"
+					icon="sap-icon://activity-individual"
+					custom:to="Anagrafica"
+					select="onListItemPress"
+				/>
+				<tnt:NavigationListItem
+					text="Documenti"
+					icon="sap-icon://documents"
+					key="Doc"
+					custom:to="Documenti"
+					select="onListItemPress"
+				/>			
+				<tnt:NavigationListItem
+					text="Nuovi Template"
+					icon="sap-icon://doc-attachment"
+					key="Doc"
+					custom:to="Template"
+					select="onListItemPress"
+				/>			
+			</tnt:NavigationList>
+</c:FragmentDefinition>

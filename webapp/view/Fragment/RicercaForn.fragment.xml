@@ -1,0 +1,143 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+  xmlns:fb="sap.ui.comp.filterbar"
+>
+<VBox backgroundDesign="Solid" height="100%">
+<fb:FilterBar
+		search="onFilterAvv"
+		clear="onReset"
+		useToolbar="false"
+		showFilterConfiguration="false"
+		filterContainerWidth="120px"
+	>
+		<fb:filterGroupItems>
+			<fb:FilterGroupItem
+				name="CodForn"
+				label="{i18n>CodiceFornitore}"
+				groupName="Filtri"
+				groupTitle="Filtri"
+				visibleInFilterBar="true"
+			>
+				<fb:control>
+					<Input
+						value="{Filtro>/Fornitore}"
+						showValueHelp="true"
+						valueHelpRequest=".handleValueHelp"
+						submit="onChangeFornitore"
+						type="Text"
+					/>
+				</fb:control>
+			</fb:FilterGroupItem>
+      <fb:FilterGroupItem
+        name="descr"
+        label="{i18n>Descrizione}"
+        groupName="Filtri"
+        groupTitle="Filtri"
+        visibleInFilterBar="true"
+      >
+      <fb:control>
+        <Input
+          value="{Filtro>/descr}"
+          showValueHelp="true"
+          valueHelpRequest=".handleValueHelp"
+          submit="onChangeFornitore"
+          type="Text"
+        />
+      </fb:control>
+      </fb:FilterGroupItem>
+      <fb:FilterGroupItem
+      name="Paese"
+      label="{i18n>Paese}"
+      groupName="Filtri"
+      groupTitle="Filtri"
+      visibleInFilterBar="true"
+    >
+      <fb:control>
+        <Input
+        value="{Filtro>/Paese}"
+          showValueHelp="true"
+          valueHelpRequest=".handleValueHelp"
+          submit="onChangeFornitore"
+          type="Text"
+        />
+      </fb:control>
+    </fb:FilterGroupItem>
+    <fb:FilterGroupItem
+    name="P.IVA"
+    label="{i18n>PIVA}"
+    groupName="Filtri"
+    groupTitle="Filtri"
+    visibleInFilterBar="true"
+  >
+    <fb:control>
+      <Input
+      value="{Filtro>/piva}"
+        showValueHelp="true"
+        valueHelpRequest=".handleValueHelp"
+        submit="onChangeFornitore"
+        type="Text"
+      />
+    </fb:control>
+  </fb:FilterGroupItem>
+
+		</fb:filterGroupItems>
+	</fb:FilterBar>
+
+  <Table
+      sticky="HeaderToolbar,ColumnHeaders"
+      growing="true"
+      autoPopinMode="true"
+      class="table"
+      items="{anagraficaModel>/}"
+      > 
+           <columns>
+        <Column width="90px">
+          <Text text="{i18n>CodiceFornitore}" />
+        </Column>
+        <Column width="130px">
+          <Text text="{i18n>Descrizione }" />
+        </Column>
+        <Column width="90px">
+          <Text text="{i18n>Paese}" />
+        </Column>
+        <Column width="90px">
+          <Text text="{i18n>PIVA}" />
+        </Column>   
+        <Column
+          width="90px"
+          hAlign="Center"
+        >
+          <Text text="{i18n>Stato}" />
+        </Column>        
+      </columns>
+      <items>
+        <ColumnListItem
+          type="Navigation"
+          press="onNavToDetail"
+        >
+          <cells>
+            <Text text="{anagraficaModel>codice}" />
+          </cells>
+          <cells>
+            <Text text="{anagraficaModel>nome}" />
+          </cells>
+          <cells>
+            <Text text="{anagraficaModel>paese}" />
+          </cells>
+          <cells>
+            <Text text="{anagraficaModel>partita_iva}" />
+          </cells>
+          <cells>
+            <c:Icon
+                alt="statusOk"
+                color="green"
+                size="1.5rem"
+                src="{anagraficaModel>status}"
+            />
+          </cells>     
+        </ColumnListItem>
+      </items>
+      </Table>
+      </VBox>
+</c:FragmentDefinition>

@@ -1,0 +1,9 @@
+/* Enter your custom styles here */
+.title {
+  font-size: large !important;
+  font-weight: bolder !important;
+}
+.uploader {
+  margin: auto !important;
+  height: 2vh !important;
+}

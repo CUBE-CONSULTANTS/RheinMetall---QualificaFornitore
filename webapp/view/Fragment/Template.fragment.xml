@@ -1,0 +1,66 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+>
+<VBox height="100%" backgroundDesign="Solid">
+	<Table
+	class="table sapUiSmallMarginTop"
+	sticky="HeaderToolbar,ColumnHeaders"
+	growing="true"
+	autoPopinMode="true"
+	> 
+	<columns>
+		<Column  hAlign="Left">
+			<Text text="{i18n>IdDocumento}" />
+		</Column>
+		<Column width="28%"  hAlign="Left">
+			<Text text="{i18n>Percorso}" />
+		</Column>
+		<Column  hAlign="Left">
+			<Text text="{i18n>DataCaricamento}" />
+		</Column>
+		<Column  hAlign="Left">
+			<Text text="{i18n>FineValidita}" />
+		</Column>
+		<Column  hAlign="Center">
+			<Text text="{i18n>Allega}" />
+		</Column>			
+	</columns>
+	<items>
+		<ColumnListItem 
+		>
+			<cells>
+			<Input />
+			</cells>
+			<cells>
+				<u:FileUploader
+				class="uploader"
+				icon="sap-icon://search"
+				style="Emphasized"
+				id="fileUploader"
+				name="myFileUpload"
+				uploadUrl="upload/"
+				uploadComplete="handleUploadComplete"/>
+			</cells>
+			<cells>
+				<DatePicker ></DatePicker>
+				</cells>
+				<cells>
+					<DatePicker ></DatePicker>
+				</cells>
+			<cells>
+				<c:Icon
+						alt="Upload"              
+						size="1.5rem"
+						src="sap-icon://upload"
+						color="blue"
+				/>
+			</cells>
+			
+			
+		</ColumnListItem>
+	</items>
+	</Table>
+</VBox>
+</c:FragmentDefinition>

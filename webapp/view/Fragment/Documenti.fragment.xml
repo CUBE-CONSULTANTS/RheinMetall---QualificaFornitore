@@ -1,0 +1,114 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+  xmlns:fb="sap.ui.comp.filterbar"
+>
+
+      <fb:FilterBar
+      search="onFilterAvv"
+      clear="onReset"
+      useToolbar="false"
+      showFilterConfiguration="false"
+      filterContainerWidth="120px"
+      >
+      <fb:filterGroupItems>
+        <fb:FilterGroupItem
+      name="Fornitore"
+      label="{i18n>CercaFornitore}"
+      groupName="Filtri"
+      groupTitle="Filtri"
+      visibleInFilterBar="true"
+      >
+      <fb:control>
+        <Input
+          value="{Filtro>/Fornitore}"
+          showValueHelp="true"
+          valueHelpRequest=".handleValueHelp"
+          submit="onChangeFornitore"
+        />
+      </fb:control>
+      </fb:FilterGroupItem>
+      </fb:filterGroupItems>
+      </fb:FilterBar>
+
+      <VBox height="70vh" backgroundDesign="Solid" >
+      <Table
+      sticky="HeaderToolbar,ColumnHeaders"
+      growing="true"
+      autoPopinMode="true"
+      class="table"
+      items="{docModel>/}"
+      > 
+      <headerToolbar>
+        <OverflowToolbar design="Transparent" height="10vh">
+          <VBox class="sapUiResponsivePadding--content"
+          >
+          <Text text="Documenti - Gestione" />      
+          </VBox>
+        </OverflowToolbar>
+        </headerToolbar>
+
+      <columns>
+        <Column width="100px"  hAlign="Left">
+          <Text text="{i18n>Descrizione	}" />
+        </Column>
+        <Column width="60px"  hAlign="Center">
+          <Text text="{i18n>Scarica}" />
+        </Column>
+        <Column width="60px"  hAlign="Center">
+          <Text text="{i18n>Validazione}" />
+        </Column>
+        <Column width="60px"  hAlign="Center">
+          <Text text="{i18n>Stato}" />
+        </Column>
+        <Column width="130px" hAlign="Center">
+          <Text text="{i18n>Data di caricamento }" />
+          </Column>   
+        <Column width="90px" hAlign="Center">
+        <Text text="{i18n>Scadenza}" />
+      </Column> 
+            
+      </columns>
+      <items>
+        <ColumnListItem
+         
+        >
+          <cells>
+            <Text text="{docModel>descrizione}" />
+          </cells>
+          <cells>
+            <c:Icon
+                alt="Download"              
+                size="1.5rem"
+                src="{docModel>scarica}"
+                color="blue"
+            />
+          </cells>
+          <cells>
+            <c:Icon
+                alt="Download"              
+                size="1.5rem"
+                src="{docModel>validazione}"
+                color="blue"
+            />
+          </cells>
+          <cells>
+            <c:Icon
+                alt="Download"              
+                size="1.5rem"
+                src="{docModel>stato}"
+                color="{docModel>color}"
+            />
+          </cells>
+          <cells>
+            <Text text="{docModel>data}" />
+          </cells>
+          <cells>
+            <Text text="{docModel>scadenza}" />
+          </cells>
+          
+        </ColumnListItem>
+      </items>
+      </Table>
+    </VBox>
+</c:FragmentDefinition>
