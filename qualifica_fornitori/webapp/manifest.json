@@ -1,0 +1,151 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "qualificafornitori.qualificafornitori",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.12.2",
+      "toolsId": "d94b2111-15df-40ea-814c-42156625f86e"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.120.4",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "qualificafornitori.qualificafornitori.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.f.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "qualificafornitori.qualificafornitori.view",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "Master",
+          "pattern": "",
+          "target": ["TargetMaster", "TargetHome"]
+        },
+        {
+          "name": "RicercaForn",
+          "pattern": "cerca",
+          "target": ["TargetMaster", "TargetRicercaForn"]
+        },
+        {
+          "name": "Documenti",
+          "pattern": "doc",
+          "target": ["TargetMaster", "TargetDocumenti"]
+        },
+        {
+          "name": "Template",
+          "pattern": "nuovi",
+          "target": ["TargetMaster", "TargetTemplate"]
+        },
+        {
+          "name": "Anagrafica",
+          "pattern": "form",
+          "target": ["TargetRicercaForn", "TargetAnagrafica"]
+        }
+      ],
+      "targets": {
+        "TargetMaster": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "beginColumnPages",
+          "viewId": "Master",
+          "viewName": "Master"
+        },
+        "TargetHome": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "midColumnPages",
+          "viewId": "Home",
+          "viewName": "Home"
+        },
+        "TargetRicercaForn": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "midColumnPages",
+          "viewId": "RicercaForn",
+          "viewName": "RicercaForn"
+        },
+        "TargetDocumenti": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "midColumnPages",
+          "viewId": "Documenti",
+          "viewName": "Documenti"
+        },
+        "TargetTemplate": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "midColumnPages",
+          "viewId": "Template",
+          "viewName": "Template"
+        },
+        "TargetAnagrafica": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "midColumnPages",
+          "viewId": "Anagrafica",
+          "viewName": "Anagrafica"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "qualificafornitori.qualificafornitori.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

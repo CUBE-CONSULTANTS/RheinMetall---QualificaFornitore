@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <OverflowToolbar >
+        <Title text="Utente: M.Bordoni" />
+        <ToolbarSpacer />
+        <Button text="{i18n>esci}"
+        icon="sap-icon://log"
+            type="Emphasized"
+            press=".onLogoutPress" />
+    </OverflowToolbar>
+</core:FragmentDefinition>
