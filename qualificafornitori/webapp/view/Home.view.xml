@@ -38,8 +38,16 @@
 		>
 			<ToolbarSpacer />
 			<ToolbarSpacer />
+			<Image
+							alt="Rheinmetall Logo"	
+							height="38.00000000px"
+							width="92.00000000px"
+							src="../public/images/Rheinmetall_Logo_2021.jpg"
+					>
+			</Image>
 			<Text 
 				text="{anagraficaModel>/0/nome}"
+				visible="false"
 				class="title"
 			/>
 		</OverflowToolbar>
@@ -70,6 +78,7 @@
 				class="sapUiResponsivePadding--header"
 				>
 				<content>
+			<core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.Fragment.FilterBar" />
 			<core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.Fragment.RicercaForn" />
 				</content>
 				</Page>
@@ -80,6 +89,7 @@
 				titleAlignment="Start"
 				class="sapUiResponsivePadding--header">
 				<content>
+					<core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.Fragment.FilterBar" />
 					 <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.Fragment.Documenti" />
 				</content>
         </Page> 
@@ -90,6 +100,7 @@
 				titleAlignment="Start"
 				class="sapUiResponsivePadding--header">
 				<content>
+
 					 <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.Fragment.Template" />
 				</content>
         </Page> 
