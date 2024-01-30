@@ -35,7 +35,10 @@
 			design="Solid"
 			class="sapUiSmallMarginTop"
 			height="6vh"
-		>
+		>	<Title
+		text="{i18n>titleprogetto}"
+		titleStyle="H3"
+	/>
 			<ToolbarSpacer />
 			<ToolbarSpacer />
 			<Image
