@@ -1,13 +1,16 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core"
     xmlns="sap.m">
-    <List backgroundDesign="Transparent" width="100%">
+    <List backgroundDesign="Transparent">
         <StandardListItem title="{i18n>AnagraficaFornitore}"
+            
             type="Navigation"
             press=".navToRicerca" />
         <StandardListItem title="{i18n>Documenti}"
+            
             type="Navigation"
             press=".navToDocumenti" />
         <StandardListItem title="{i18n>Template}"
+           
             type="Navigation"
             press=".navToTemplate" />       
     </List>

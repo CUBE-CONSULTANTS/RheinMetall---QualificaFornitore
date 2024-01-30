@@ -4,13 +4,13 @@ xmlns="sap.m"
 xmlns:c="sap.ui.core"
 xmlns:f="sap.ui.layout.form"
 >
-<VBox backgroundDesign="Solid" width="80%" class="sapUiResponsiveMargin" >
+<VBox backgroundDesign="Solid" width="100%" >
 <f:SimpleForm 
-class="sapUiMediumMarginTop"
+class="sapUiTinyMarginTopBottom" 
   editable="false"
   layout="ResponsiveGridLayout"
   labelSpanXL="4"
-  labelSpanL="4"
+  labelSpanL="2"
   labelSpanM="12"
   labelSpanS="12"
   adjustLabelSpan="false"
@@ -19,10 +19,9 @@ class="sapUiMediumMarginTop"
   emptySpanM="0"
   emptySpanS="0"
   columnsXL="2"
-  columnsL="2"
+  columnsL="1"
   columnsM="1"
-  singleContainerFullSize="false"
-  
+  singleContainerFullSize="false" 
 >
   <f:content>
     <Label text="Nome" />

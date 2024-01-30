@@ -6,18 +6,32 @@
     xmlns:l="sap.ui.layout"
     height="100%"
     displayBlock="true">
-    <f:DynamicPage showFooter="false"
+    <f:DynamicPage showFooter="true"
         busy="{master>/options/busy}"
         busyIndicatorDelay="0"
         preserveHeaderStateOnScroll="false"
-        toggleHeaderOnTitleClick="true">
+        toggleHeaderOnTitleClick="true"
+        >
         <f:header>
             <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.fragment.anagrafica.Header"
-            type="XML" />
+            type="XML" />           
         </f:header>
+        
         <f:content>
             <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.fragment.anagrafica.form"
             type="XML" />
         </f:content>
+        <f:footer>
+            <OverflowToolbar             
+            >
+                <Button                    
+                    icon="sap-icon://nav-back"                    
+                    text="Indietro"                  
+                    type="Emphasized"
+                    press="navToRicerca"
+                >                   
+                </Button>
+            </OverflowToolbar>
+        </f:footer>
     </f:DynamicPage>
 </mvc:View>

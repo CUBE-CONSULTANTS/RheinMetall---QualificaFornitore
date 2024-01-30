@@ -3,7 +3,12 @@
     xmlns:f="sap.f"
     xmlns="sap.m"
 >
-    <f:DynamicPageHeader pinnable="false">
-        
+    <f:DynamicPageHeader pinnable="false" >
+        <f:content >
+            <Title
+            level="H3"
+            text="{i18n>AnagraficaFornitore} - {anagraficaModel>/0/nome} "
+            />
+        </f:content> 
     </f:DynamicPageHeader>
 </core:FragmentDefinition>

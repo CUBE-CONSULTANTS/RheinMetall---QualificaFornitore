@@ -7,7 +7,7 @@ sap.ui.define(
     "use strict";
 
     return Controller.extend(
-      "qualificafornitori.qualificafornitori.controller.Documenti",
+      "qualificafornitori.qualificafornitori.controller.Anagrafica",
       {
         onInit: async function () {
           debugger;
@@ -18,6 +18,9 @@ sap.ui.define(
           let oModelDoc = new JSONModel(data.documenti);
           this.setModel(oModelAn, "anagraficaModel");
           this.setModel(oModelDoc, "docModel");
+        },
+        navToRicerca: function () {
+          this.getRouter().navTo("RicercaForn");
         },
       }
     );

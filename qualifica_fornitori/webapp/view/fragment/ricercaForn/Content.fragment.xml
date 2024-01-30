@@ -3,8 +3,9 @@
 	xmlns:c="sap.ui.core"
   xmlns:fb="sap.ui.comp.filterbar"
 >
-<VBox backgroundDesign="Transparent" height="100%" width="100%">
 
+<VBox  height="100%" width="100%">
+  
   <fb:FilterBar
   search="onFilterAvv"
   clear="onReset"
