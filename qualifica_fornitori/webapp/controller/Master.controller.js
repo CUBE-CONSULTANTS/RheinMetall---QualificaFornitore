@@ -9,19 +9,8 @@ sap.ui.define(
     return Controller.extend(
       "qualificafornitori.qualificafornitori.controller.Master",
       {
-        onInit: function () {
-          this.userType = this.getOwnerComponent()
-            .getModel("userModel")
-            .getProperty("/tipoUtente");
-          let oRouter = this.getOwnerComponent().getRouter();
-          let oTargetRicercaForn = oRouter.getTarget("TargetRicercaForn");
-          let oTargetAnagrafica = oRouter.getTarget("TargetAnagrafica");
-          debugger;
-
-          if (this.userType !== "Interno") {
-            oTargetRicercaForn._oOptions._visible = false;
-            oTargetAnagrafica._oOptions._visible = true;
-          }
+        onInit: function () {       
+          this.userType = this.getOwnerComponent().getModel("userModel").getProperty("/tipoUtente");
         },
 
         navToMaster: function () {
@@ -48,6 +37,7 @@ sap.ui.define(
             ? this.navToRicerca()
             : this.navToAnagrafica();
         },
+        
       }
     );
   }

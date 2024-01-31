@@ -6,21 +6,22 @@
 <VBox height="100%" backgroundDesign="Solid">
 	<Table
 	class="table sapUiSmallMarginTop"
-	sticky="HeaderToolbar,ColumnHeaders"
+	sticky="ColumnHeaders"
 	growing="true"
 	autoPopinMode="true"
 	> 
-	<columns>
-		<Column  hAlign="Left">
+	
+	<columns >
+		<Column width="22%" hAlign="Left">
 			<Text text="{i18n>IdDocumento}" />
 		</Column>
-		<Column width="28%"  hAlign="Left">
+		<Column width="35%" hAlign="Left">
 			<Text text="{i18n>Percorso}" />
 		</Column>
-		<Column  hAlign="Left">
+		<Column width="18%"  hAlign="Left">
 			<Text text="{i18n>DataCaricamento}" />
 		</Column>
-		<Column  hAlign="Left">
+		<Column width="18%" hAlign="Left">
 			<Text text="{i18n>FineValidita}" />
 		</Column>
 		<Column  hAlign="Center">
@@ -28,13 +29,14 @@
 		</Column>			
 	</columns>
 	<items>
-		<ColumnListItem 
+		<ColumnListItem
 		>
 			<cells>
 			<Input />
 			</cells>
 			<cells>
 				<u:FileUploader
+				width="23rem"
 				class="uploader"
 				icon="sap-icon://search"
 				style="Emphasized"
@@ -44,17 +46,15 @@
 				uploadComplete="handleUploadComplete"/>
 			</cells>
 			<cells>
-				<DatePicker ></DatePicker>
+				<DatePicker></DatePicker>
 				</cells>
 				<cells>
 					<DatePicker ></DatePicker>
 				</cells>
 			<cells>
-				<c:Icon
-						alt="Upload"              
-						size="1.5rem"
-						src="sap-icon://upload"
-						color="blue"
+				<Button
+						icon="sap-icon://upload"
+						type="Emphasized"
 				/>
 			</cells>
 			

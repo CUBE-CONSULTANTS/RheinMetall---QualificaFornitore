@@ -11,7 +11,10 @@ sap.ui.define(
   ],
   function (UIComponent, Device, models, JSONModel) {
     "use strict";
-
+    function getRandomUserType() {
+      // Restituisce casualmente "Interno" o "Esterno"
+      return Math.random() < 0.5 ? "Interno" : "Esterno";
+    }
     return UIComponent.extend(
       "qualificafornitori.qualificafornitori.Component",
       {
@@ -30,23 +33,20 @@ sap.ui.define(
           sap.ui.getCore().getConfiguration().setLanguage("IT");
           // enable routing
           this.getRouter().initialize();
-
-          // set the device model
+          
           this.setModel(models.createDeviceModel(), "device");
+
           const user = new JSONModel({
             tipoUtente: null,
             nome: null,
           });
+          debugger
           this.setModel(user, "userModel");
-          const oUserType = this.getModel("userModel").setProperty(
-            "/tipoUtente",
-            "Interno"
-          );
-          const oUserName = this.getModel("userModel").setProperty(
-            "/nome",
-            "M.Bordoni"
-          );
-        },
+          const randomUserType = getRandomUserType();
+          this.getModel("userModel").setProperty("/tipoUtente", randomUserType);
+          this.getModel("userModel").setProperty("/nome", randomUserType);    
+          this.getRouter().navTo("Master");    
+        }
       }
     );
   }

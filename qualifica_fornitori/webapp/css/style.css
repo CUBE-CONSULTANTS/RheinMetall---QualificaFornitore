@@ -2,11 +2,11 @@
 .prova {
   background: red !important;
 }
-.prova2 {
-  background: blue !important;
-}
 .sapMSLI {
   height: 10vh !important;
   /* font-size: larger !important; */
   font-weight: 900 !important;
+}
+.uploader:first-child {
+  padding-top: 0.28rem !important;
 }

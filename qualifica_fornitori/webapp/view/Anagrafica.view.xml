@@ -29,8 +29,7 @@
                     icon="sap-icon://nav-back"                    
                     text="Indietro"                  
                     type="Emphasized"
-                    press="navToRicerca"
-                    
+                    press="navToRicerca" 
                 >                   
                 </Button>
             </OverflowToolbar>

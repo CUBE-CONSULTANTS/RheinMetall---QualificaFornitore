@@ -11,6 +11,7 @@
   useToolbar="false"
   showFilterConfiguration="false"
   class="sapUiSmallMarginBottom"
+  visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
 >
   <fb:filterGroupItems>
     <fb:FilterGroupItem
@@ -107,15 +108,21 @@
         <Column width="60px"  hAlign="Center">
           <Text text="{i18n>Scarica}" />
         </Column>
-        <Column width="60px"  hAlign="Center">
+        <Column width="60px"  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
           <Text text="{i18n>Validazione}" />
+        </Column>
+        <Column width="60px"  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+          <Text text="{i18n>Allega}" />
         </Column>
         <Column width="60px"  hAlign="Center">
           <Text text="{i18n>Stato}" />
         </Column>
-        <Column width="130px" hAlign="Center">
+        <Column width="130px" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
           <Text text="{i18n>Data di caricamento }" />
           </Column>   
+          <Column width="60px"  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+            <Text text="{i18n>Esito}" />
+          </Column>
         <Column width="90px" hAlign="Center">
         <Text text="{i18n>Scadenza}" />
       </Column> 
@@ -129,31 +136,38 @@
             <Text text="{docModel>descrizione}" />
           </cells>
           <cells>
-            <c:Icon
-                alt="Download"              
-                size="1.5rem"
-                src="{docModel>scarica}"
-                color="blue"
+            <Button
+                icon="{docModel>scarica}"
+                type="Emphasized"
             />
           </cells>
           <cells>
             <c:Icon
                 alt="Download"              
-                size="1.5rem"
+                size="1.3rem"
                 src="{docModel>validazione}"
                 color="blue"
             />
           </cells>
           <cells>
+            <Button
+                type="Emphasized"
+                icon="{docModel>allega}"                
+            />
+          </cells>
+          <cells>
             <c:Icon
                 alt="Download"              
-                size="1.5rem"
+                size="1.3rem"
                 src="{docModel>stato}"
                 color="{docModel>color}"
             />
           </cells>
           <cells>
             <Text text="{docModel>data}" />
+          </cells>
+          <cells>
+            <Text text="{docModel>esito_validazione}" />
           </cells>
           <cells>
             <Text text="{docModel>scadenza}" />
