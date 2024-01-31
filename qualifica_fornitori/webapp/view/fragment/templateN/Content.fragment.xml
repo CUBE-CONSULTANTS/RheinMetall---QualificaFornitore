@@ -3,7 +3,7 @@
 	xmlns:c="sap.ui.core"
 	xmlns:u="sap.ui.unified"
 >
-<VBox height="100%" backgroundDesign="Solid">
+<VBox height="100%" backgroundDesign="Transparent" class="sapUiSmallMarginTopBottom">
 	<Table
 	class="table sapUiSmallMarginTop"
 	sticky="ColumnHeaders"

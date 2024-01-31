@@ -4,7 +4,7 @@
   xmlns:fb="sap.ui.comp.filterbar"
 >
 
-<VBox  height="100%" width="100%">
+<VBox  height="100%" width="100%" class="sapUiSmallMarginTopBottom">
   
   <fb:FilterBar
   search="onFilterAvv"

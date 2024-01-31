@@ -40,7 +40,7 @@ sap.ui.define(
             tipoUtente: null,
             nome: null,
           });
-          debugger
+         
           this.setModel(user, "userModel");
           const randomUserType = getRandomUserType();
           this.getModel("userModel").setProperty("/tipoUtente", randomUserType);

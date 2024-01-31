@@ -4,7 +4,7 @@ xmlns="sap.m"
 xmlns:c="sap.ui.core"
 xmlns:f="sap.ui.layout.form"
 >
-<VBox backgroundDesign="Solid" width="100%" >
+<VBox backgroundDesign="Solid" alignItems="Inherit" class="sapUiSmallMarginTopBottom"   >
 <f:SimpleForm 
 class="sapUiTinyMarginTopBottom" 
   editable="false"
