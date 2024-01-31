@@ -19,7 +19,7 @@ xmlns="sap.m"
                     <Image press=".navToMaster" width="40rem" src="../public/images/Rheinmetall_Logo_2021.jpg" />
                 </VBox>
                 <VBox width="100%" alignItems="Center">
-                    <Title titleStyle="H2" level="H2" text="{i18n>welcomeMessage}: M.Bordoni" />
+                    <Title titleStyle="H2" level="H2" text="{i18n>welcomeMessage} {userModel>/nome}" />
                 </VBox>
             </VBox>
         </f:content>

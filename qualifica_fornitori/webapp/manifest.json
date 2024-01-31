@@ -93,7 +93,7 @@
         {
           "name": "Anagrafica",
           "pattern": "form",
-          "target": ["TargetRicercaForn", "TargetAnagrafica"]
+          "target": ["TargetMaster", "TargetAnagrafica"]
         }
       ],
       "targets": {

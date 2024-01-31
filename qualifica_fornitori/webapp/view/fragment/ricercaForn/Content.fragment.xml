@@ -115,7 +115,7 @@ items="{anagraficaModel>/}"
 <items>
   <ColumnListItem
     type="Navigation"
-    press="onNavToDetail"
+    press="navToAnagrafica"
   >
     <cells>
       <Text text="{anagraficaModel>codice}" />

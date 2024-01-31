@@ -11,18 +11,20 @@ sap.ui.define(
       "qualificafornitori.qualificafornitori.controller.RicercaForn",
       {
         onInit: async function () {
+          this.setMockData();
           debugger;
+        },
+        navToAnagrafica: function () {
+          this.getRouter().navTo("Anagrafica");
+        },
+        setMockData: async function () {
           let objJSon = await fetch("/model/modMock.json");
           let data = await objJSon.json();
-
           let oModelAn = new JSONModel(data.azienda);
-          let oModelDoc = new JSONModel(data.documenti);
           this.setModel(oModelAn, "anagraficaModel");
+          let oModelDoc = new JSONModel(data.documenti);
           this.setModel(oModelDoc, "docModel");
         },
-        onNavToDetail: function (){
-          this.getRouter().navTo("Anagrafica")
-        }
       }
     );
   }

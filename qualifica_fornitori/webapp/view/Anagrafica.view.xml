@@ -22,13 +22,15 @@
             type="XML" />
         </f:content>
         <f:footer>
-            <OverflowToolbar             
+            <OverflowToolbar    
+            visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"         
             >
                 <Button                    
                     icon="sap-icon://nav-back"                    
                     text="Indietro"                  
                     type="Emphasized"
                     press="navToRicerca"
+                    
                 >                   
                 </Button>
             </OverflowToolbar>
