@@ -16,7 +16,9 @@ sap.ui.define(
         navToMaster: function () {
           this.getRouter().navTo("Master");
         },
-
+        navToRicercaDoc: function () {
+          this.getRouter().navTo("RicercaDoc");
+        },
         navToRicerca: function () {
           this.getRouter().navTo("RicercaForn");
         },
@@ -37,7 +39,11 @@ sap.ui.define(
             ? this.navToRicerca()
             : this.navToAnagrafica();
         },
-        
+        onDocBtnPress: function () {
+          this.userType === "Interno"
+          ? this.navToRicercaDoc()
+          : this.navToDocumenti();
+        }
       }
     );
   }

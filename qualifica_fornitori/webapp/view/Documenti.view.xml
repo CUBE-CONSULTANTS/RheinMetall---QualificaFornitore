@@ -6,7 +6,7 @@
     xmlns:l="sap.ui.layout"
     height="100%"
     displayBlock="true">
-    <f:DynamicPage showFooter="false"
+    <f:DynamicPage showFooter="true"
         busy="{master>/options/busy}"
         busyIndicatorDelay="0"
         preserveHeaderStateOnScroll="false"
@@ -19,5 +19,18 @@
             <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.fragment.documenti.Content"
                 type="XML" />
         </f:content>
+        <f:footer>
+            <OverflowToolbar    
+            visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"         
+            >
+                <Button                    
+                    icon="sap-icon://nav-back"                    
+                    text="Indietro"                  
+                    type="Emphasized"
+                    press="navToRicercaDoc" 
+                >                   
+                </Button>
+            </OverflowToolbar>
+        </f:footer>
     </f:DynamicPage>
 </mvc:View>

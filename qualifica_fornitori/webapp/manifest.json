@@ -81,6 +81,11 @@
           "target": ["TargetMaster", "TargetRicercaForn"]
         },
         {
+          "name": "RicercaDoc",
+          "pattern": "ricerca",
+          "target": ["TargetMaster", "TargetRicercaDoc"]
+        },
+        {
           "name": "Documenti",
           "pattern": "doc",
           "target": ["TargetMaster", "TargetDocumenti"]
@@ -117,6 +122,13 @@
           "controlAggregation": "midColumnPages",
           "viewId": "RicercaForn",
           "viewName": "RicercaForn"
+        },
+        "TargetRicercaDoc": {
+          "viewType": "XML",
+          "transition": "slide",
+          "controlAggregation": "midColumnPages",
+          "viewId": "RicercaDoc",
+          "viewName": "RicercaDoc"
         },
         "TargetDocumenti": {
           "viewType": "XML",
