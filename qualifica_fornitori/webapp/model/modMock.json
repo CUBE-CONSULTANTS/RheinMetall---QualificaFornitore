@@ -35,7 +35,8 @@
       "data": "29/02/2024",
       "color": "green",
       "validazione": "sap-icon://accept",
-      "scadenza": "25/03/2024"
+      "scadenza": "25/03/2024",
+      "editable": false
     },
     {
       "descrizione": "Matrice di compliance",
@@ -46,7 +47,8 @@
       "stato": "sap-icon://status-in-process",
       "esito_validazione": "In Attesa",
       "data": "25/02/2024",
-      "color": "orange"
+      "color": "orange",
+      "editable": false
     },
     {
       "descrizione": "DURC",
@@ -57,7 +59,8 @@
       "data": "12/02/2024",
       "color": "red",
       "validazione": "sap-icon://error",
-      "scadenza": "25/03/2024"
+      "scadenza": "25/03/2024",
+      "editable": true
     }
   ]
 }

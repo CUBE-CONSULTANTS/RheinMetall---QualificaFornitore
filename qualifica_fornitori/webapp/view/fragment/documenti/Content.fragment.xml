@@ -88,8 +88,8 @@
           <cells>
             <Text text="{docModel>esito_validazione}" />
           </cells>
-          <cells>
-            <Text text="{docModel>scadenza}" />
+          <cells >
+            <Input textAlign="Center" value="{docModel>scadenza}" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : ${docModel>editable} }" />
           </cells>
           
         </ColumnListItem>

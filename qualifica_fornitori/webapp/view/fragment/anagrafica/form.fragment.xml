@@ -1,5 +1,5 @@
 <c:FragmentDefinition
-xmlns:form="sap.ui.layout.form"
+
 xmlns="sap.m"
 xmlns:c="sap.ui.core"
 xmlns:f="sap.ui.layout.form"

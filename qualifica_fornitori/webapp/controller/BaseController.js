@@ -1,6 +1,6 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History", "sap/ui/core/UIComponent"],
-  function (Controller, History, UIComponent) {
+  ["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History", "sap/ui/core/UIComponent", "sap/ui/core/Fragment"],
+  function (Controller, History, UIComponent, Fragment) {
       "use strict";
 
       return Controller.extend("qualificafornitori.qualificafornitori.controller.BaseController", {
@@ -25,7 +25,26 @@ sap.ui.define(
           setModel: function (oModel, sName) {
               return this.getView().setModel(oModel, sName);
           },
-
+          onOpenDialog: function(dialName, fragmName, self, ...oModel) {
+            let oView = this.getView();
+            dialName = self.dialName;
+            if (!dialName) {
+                dialName = Fragment.load({
+                    id: oView.getId(),
+                    name: fragmName,
+                    controller: self,
+                }).then((oValueHelpDialog) => {             
+                    oView.addDependent(oValueHelpDialog);
+                    oValueHelpDialog.setModel(this.getModel(...oModel));
+                    return oValueHelpDialog;
+                });
+                dialName.then(function(oValueHelpDialog) {
+                    oValueHelpDialog.open();
+                });
+            }else{                
+                self.dialName.open()
+            }        
+        },
           /**
            * Convenience method for getting the resource bundle.
            * @public

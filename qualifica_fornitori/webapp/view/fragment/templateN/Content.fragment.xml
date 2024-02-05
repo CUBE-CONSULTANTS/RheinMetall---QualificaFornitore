@@ -12,21 +12,23 @@
 	> 
 	
 	<columns >
-		<Column width="22%" hAlign="Left">
+		<Column width="30%" hAlign="Left">
 			<Text text="{i18n>IdDocumento}" />
 		</Column>
-		<Column width="35%" hAlign="Left">
+		<Column width="10%"  hAlign="Center">
+			<Text text="{i18n>Allega}" />
+		</Column>			
+		
+		<!-- <Column width="35%" hAlign="Left">
 			<Text text="{i18n>Percorso}" />
-		</Column>
+		</Column> -->
 		<Column width="18%"  hAlign="Left">
 			<Text text="{i18n>DataCaricamento}" />
 		</Column>
 		<Column width="18%" hAlign="Left">
 			<Text text="{i18n>FineValidita}" />
 		</Column>
-		<Column  hAlign="Center">
-			<Text text="{i18n>Allega}" />
-		</Column>			
+		
 	</columns>
 	<items>
 		<ColumnListItem
@@ -35,7 +37,12 @@
 			<Input />
 			</cells>
 			<cells>
-				<u:FileUploader
+				<Button
+						icon="sap-icon://upload"
+						type="Emphasized"
+						press="onOpenMaskAllega"
+				/>
+				<!-- <u:FileUploader
 				width="23rem"
 				class="uploader"
 				icon="sap-icon://search"
@@ -43,22 +50,16 @@
 				id="fileUploader"
 				name="myFileUpload"
 				uploadUrl="upload/"
-				uploadComplete="handleUploadComplete"/>
+				uploadComplete="handleUploadComplete"/> -->
 			</cells>
+			
 			<cells>
-				<DatePicker></DatePicker>
+				<Input />
 				</cells>
 				<cells>
-					<DatePicker ></DatePicker>
+					<Input />
 				</cells>
-			<cells>
-				<Button
-						icon="sap-icon://upload"
-						type="Emphasized"
-				/>
-			</cells>
-			
-			
+					
 		</ColumnListItem>
 	</items>
 	</Table>
