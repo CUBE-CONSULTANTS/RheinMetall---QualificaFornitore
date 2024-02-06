@@ -45,8 +45,8 @@
                 iconOnly="true"
                 icon="sap-icon://search"
                 style="Emphasized"
-                id="fileUploader"
-                name="myFileUpload"
+                
+                
                 uploadUrl="upload/"
                 placeholder="Sfoglia..."
                 uploadComplete="handleUploadComplete"/>

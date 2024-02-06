@@ -16,6 +16,7 @@ sap.ui.define(
 
         },
         onOpenMaskAllega: function (oEvent) {
+          debugger
           let mask = new JSONModel()
           this.setModel(mask,"modelloMask")
           this.onOpenDialog("nDialog","qualificafornitori.qualificafornitori.view.fragment.templateN.maskAllegati",this,"modelloMask");
