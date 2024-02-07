@@ -12,20 +12,20 @@
 	> 
 	
 	<columns >
-		<Column width="30%" hAlign="Left">
+		<Column width="60px" hAlign="Left">
 			<Text text="{i18n>IdDocumento}" />
 		</Column>
-		<Column width="10%"  hAlign="Center">
+		<Column width="10px"  hAlign="Center">
 			<Text text="{i18n>Allega}" />
 		</Column>			
 		
 		<!-- <Column width="35%" hAlign="Left">
 			<Text text="{i18n>Percorso}" />
 		</Column> -->
-		<Column width="18%"  hAlign="Left">
+		<Column width="50px"  hAlign="Left">
 			<Text text="{i18n>DataCaricamento}" />
 		</Column>
-		<Column width="18%" hAlign="Left">
+		<Column width="50px" hAlign="Left">
 			<Text text="{i18n>FineValidita}" />
 		</Column>
 		
@@ -54,10 +54,19 @@
 			</cells>
 			
 			<cells>
-				<Input />
+				<DatePicker
+						editable="false"
+						value="08/02/2024"
+				>
+	
+				</DatePicker>
 				</cells>
 				<cells>
-					<Input />
+					<DatePicker
+							
+					>
+							
+					</DatePicker>
 				</cells>
 					
 		</ColumnListItem>

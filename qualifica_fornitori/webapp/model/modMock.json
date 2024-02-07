@@ -12,6 +12,32 @@
         "stato": "IT"
       },
       "status": "sap-icon://status-positive",
+      "color": "green",
+      "lingua": "Italiano",
+      "contatti": {
+        "telefono": {
+          "interno": "0331 279414"
+        },
+        "fax": {
+          "interno": "0331 279400"
+        },
+        "email": "f.dibelucci@aviometal.com"
+      },
+      "partita_iva": "IT02411130129"
+    },
+    {
+      "codice": "5831",
+      "nome": "ELTOS SPA",
+      "paese": "Italia",
+      "indirizzo": {
+        "via": "Via Sempione, 15",
+        "cap": "21010",
+        "comune": "Arsago Seprio",
+        "provincia": "VA",
+        "stato": "IT"
+      },
+      "status": "sap-icon://status-negative",
+      "color": "red",
       "lingua": "Italiano",
       "contatti": {
         "telefono": {
@@ -34,7 +60,6 @@
       "esito_validazione": "Allegato",
       "data": "29/02/2024",
       "color": "green",
-      "validazione": "sap-icon://accept",
       "scadenza": "25/03/2024",
       "editable": false
     },
@@ -42,7 +67,6 @@
       "descrizione": "Matrice di compliance",
       "scarica": "sap-icon://download",
       "allega": "sap-icon://upload",
-      "validazione": "sap-icon://lateness",
       "scadenza": "25/03/2024",
       "stato": "sap-icon://status-in-process",
       "esito_validazione": "In Attesa",
@@ -58,9 +82,22 @@
       "esito_validazione": "Non Allegato",
       "data": "12/02/2024",
       "color": "red",
-      "validazione": "sap-icon://error",
       "scadenza": "25/03/2024",
       "editable": true
+    } 
+  ],
+  "validazione": [
+    {
+      "value": "",
+      "text": ""
+    },
+    {
+      "value": "V",
+      "text": "Validato"
+    },
+    {
+      "value": "N",
+      "text": "Non Validato"
     }
   ]
 }

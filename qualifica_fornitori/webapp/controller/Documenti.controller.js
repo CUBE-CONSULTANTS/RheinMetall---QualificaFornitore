@@ -18,6 +18,8 @@ sap.ui.define(
           let oModelDoc = new JSONModel(data.documenti);
           this.setModel(oModelAn, "anagraficaModel");
           this.setModel(oModelDoc, "docModel");
+          let oValDoc = new JSONModel(data.validazione)
+          this.setModel(oValDoc, "valModel")
         },
         navToRicercaDoc: function () {
           this.getRouter().navTo("RicercaDoc");

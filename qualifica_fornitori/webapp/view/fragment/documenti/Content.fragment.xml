@@ -27,7 +27,7 @@
         <Column width="60px"  hAlign="Center">
           <Text text="{i18n>Scarica}" />
         </Column>
-        <Column width="60px"  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
+        <Column width="100px"  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
           <Text text="{i18n>Validazione}" />
         </Column>
         <Column width="60px"  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
@@ -60,13 +60,10 @@
                 type="Emphasized"
             />
           </cells>
-          <cells>
-            <c:Icon
-                alt="Download"              
-                size="1.3rem"
-                src="{docModel>validazione}"
-                color="blue"
-            />
+          <cells>          
+            <Select width="150px" items="{valModel>/}">
+              <c:Item key="{valModel>value}" text="{valModel>text}"/>
+            </Select>
           </cells>
           <cells>
             <Button

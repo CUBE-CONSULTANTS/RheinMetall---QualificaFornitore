@@ -132,7 +132,7 @@ items="{anagraficaModel>/}"
     <cells>
       <c:Icon
           alt="statusOk"
-          color="green"
+          color="{anagraficaModel>color}"
           size="1.3rem"
           src="{anagraficaModel>status}"
       />

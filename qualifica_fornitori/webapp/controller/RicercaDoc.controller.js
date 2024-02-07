@@ -23,6 +23,7 @@ sap.ui.define(
           let data = await objJSon.json();
           let oModelAn = new JSONModel(data.azienda);
           this.setModel(oModelAn, "anagraficaModel");
+          debugger
           let oModelDoc = new JSONModel(data.documenti);
           this.setModel(oModelDoc, "docModel");
         },
