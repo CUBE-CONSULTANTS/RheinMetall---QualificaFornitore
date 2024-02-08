@@ -23,6 +23,15 @@ sap.ui.define(
         },
         navToRicercaDoc: function () {
           this.getRouter().navTo("RicercaDoc");
+        },
+        onOpenMaskAllega: function (oEvent) {
+          debugger
+          let mask = new JSONModel()
+          this.setModel(mask,"modelloMask")
+          this.onOpenDialog("nDialog","qualificafornitori.qualificafornitori.view.fragment.documenti.maskAllegati",this,"modelloMask");
+        },
+        onCloseAllegati:function (oEvent) {
+          oEvent.getSource().getParent().getParent().close()
         }
       }
     );

@@ -68,7 +68,8 @@
           <cells>
             <Button
                 type="Emphasized"
-                icon="{docModel>allega}"                
+                icon="{docModel>allega}"   
+                press="onOpenMaskAllega"             
             />
           </cells>
           <cells>
