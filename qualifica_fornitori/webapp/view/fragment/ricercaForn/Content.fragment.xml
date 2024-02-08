@@ -25,7 +25,7 @@
         <Input
           value="{Filtro>/Fornitore}"
           showValueHelp="true"
-          valueHelpRequest=".handleValueHelp"
+          
           submit="onChangeFornitore"
           type="Text"
         />
@@ -59,7 +59,7 @@
       <Input
       value="{Filtro>/Paese}"
         showValueHelp="true"
-        valueHelpRequest=".handleValueHelp"
+        
         submit="onChangeFornitore"
         type="Text"
       />
@@ -76,7 +76,7 @@
     <Input
     value="{Filtro>/piva}"
       showValueHelp="true"
-      valueHelpRequest=".handleValueHelp"
+      
       submit="onChangeFornitore"
       type="Text"
     />

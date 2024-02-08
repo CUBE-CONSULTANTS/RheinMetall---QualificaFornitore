@@ -1,10 +1,14 @@
 sap.ui.define(
-  ["./BaseController", "sap/ui/model/json/JSONModel"],
+  ["./BaseController", "sap/ui/model/json/JSONModel",
+  "sap/ui/core/Fragment",
+	],
 
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, JSONModel) {
+  function (Controller,
+	JSONModel,Fragment
+	) {
     "use strict";
 
     return Controller.extend(
@@ -25,6 +29,14 @@ sap.ui.define(
           let oModelDoc = new JSONModel(data.documenti);
           this.setModel(oModelDoc, "docModel");
         },
+        handleValueHelp:function () {
+          debugger
+          this.setModel(new JSONModel(), "dialogModel")
+          this.onOpenDialog("mDialog", "qualificafornitori.qualificafornitori.view.fragment.ricercaForn.dialogRicerca", this, "dialogModel")
+        },
+        onClose:function (oEvent) {
+          oEvent.getSource().getParent().getParent().close()
+        }
       }
     );
   }

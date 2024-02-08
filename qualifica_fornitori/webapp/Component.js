@@ -13,7 +13,7 @@ sap.ui.define(
     "use strict";
     function getRandomUserType() {
       // Restituisce casualmente "Interno" o "Esterno"
-      return Math.random() < 0.5 ? "Interno" : "Esterno";
+      return Math.random() < 0.5 ? "Interno" : "Fornitore";
     }
     return UIComponent.extend(
       "qualificafornitori.qualificafornitori.Component",
