@@ -12,8 +12,10 @@
         preserveHeaderStateOnScroll="false"
         toggleHeaderOnTitleClick="true">
         <f:header>
-          <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.fragment.ricercaDoc.Header"
-          type="XML" />
+            <f:DynamicPageHeader pinnable="false">
+                <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.fragment.filterbar"
+                type="XML" />
+                  </f:DynamicPageHeader>
         </f:header>
         <f:content>   
             <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.fragment.ricercaDoc.Content"
