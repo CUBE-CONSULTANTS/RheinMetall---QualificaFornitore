@@ -22,17 +22,8 @@
             type="XML" />
         </f:content>
         <f:footer>
-            <OverflowToolbar    
-            visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"         
-            >
-                <Button                    
-                    icon="sap-icon://nav-back"                    
-                    text="Indietro"                  
-                    type="Emphasized"
-                    press="navToRicerca" 
-                >                   
-                </Button>
-            </OverflowToolbar>
+            <core:Fragment fragmentName="qualificafornitori.qualificafornitori.view.fragment.anagrafica.Footer"
+            type="XML" />
         </f:footer>
     </f:DynamicPage>
 </mvc:View>

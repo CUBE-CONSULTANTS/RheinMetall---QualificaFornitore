@@ -4,14 +4,16 @@ sap.ui.define(
     "sap/ui/core/routing/History",
     "sap/ui/core/UIComponent",
     "sap/ui/core/Fragment",
-    "sap/ui/model/json/JSONModel"
+    "sap/ui/model/json/JSONModel",
+    "qualificafornitori/qualificafornitori/model/formatter"
   ],
-  function (Controller, History, UIComponent, Fragment, JSONModel) {
+  function (Controller, History, UIComponent, Fragment, JSONModel,formatter) {
     "use strict";
 
     return Controller.extend(
       "qualificafornitori.qualificafornitori.controller.BaseController",
       {
+        formatter: formatter,
         /**
          * Convenience method for getting the view model by name in every controller of the application.
          * @public
